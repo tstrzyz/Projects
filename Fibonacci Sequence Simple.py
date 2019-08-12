@@ -1,7 +1,7 @@
 def fibonaccinumbers(n): 
   List = [0,1]
   i = int(1)
-  for I in length-1:  
+  for a in length-1:  
     List.append(List[len(List)-1]+List[len(List)-2])
     i += 1
   List.remove(0)

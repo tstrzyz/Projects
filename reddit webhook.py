@@ -14,8 +14,8 @@ reddit = praw.Reddit(client_id='iuTJp7rcVqQQMg',
 
 
 subreddit = reddit.subreddit("hentai")
-for submission in subreddit.hot(limit=None):
+for submission in subreddit.hot(limit=10):
     requests.post(url="""https://discordapp.com/api/webhooks/604070862064451600/_xEU6u03l31TQwREqIOQuTSoRyqqsid5pFHgkaNtMgDFEXgRetSanxr4tlkRmeMdb1ks"""
     ,data={"content":("{} {}").format(submission.title,submission.url)})
-    time.sleep(15)
+    time.sleep(1)
 
