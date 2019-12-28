@@ -14,7 +14,7 @@ drawing = True
 
 while not done:
     pygame.display.update()
-    clock.tick(480)
+    clock.tick(60)
     spot = pygame.mouse.get_pos()
 
     m_x = int(spot[0])
@@ -28,13 +28,13 @@ while not done:
         if event.type == pygame.MOUSEMOTION:
             if drawing == True:
                 pygame.draw.circle(screen,color,spot,radius)
-                for i in range(3):
+                for i in range(2):
                     pygame.gfxdraw.aacircle(screen,m_x-1,m_y,radius,color)
                     radius -= 1
                 radius = 6
         if event.type == pygame.MOUSEBUTTONDOWN:
             pygame.draw.circle(screen,color,spot,radius)
-            for i in range(3):
+            for i in range(2):
                 pygame.gfxdraw.aacircle(screen,m_x-1,m_y,radius,color)
                 radius -= 1
             radius = 6
