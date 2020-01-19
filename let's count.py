@@ -1,9 +1,9 @@
-number = input("Hey, what's yo numba?")
+number = input("Hey, what's yo number?")
 input = str(number)
-n = (input)
+n = int((input))
 
 while n > 0:
-    print ("noob" *n + (number))
+    print ("noob " * n)
     n = n - 1
 
 
