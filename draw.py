@@ -34,6 +34,7 @@ while not done:
     rel = pygame.mouse.get_rel()
 
     for event in pygame.event.get():
+        print(mousepos)
         if event.type == pygame.MOUSEBUTTONDOWN:
             Brush.circle(screen,m_x,m_y,Brush.width,Brush.color)
                 
@@ -43,7 +44,10 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
         if drawing == True:
+            
             Brush.circle(screen,m_x,m_y,Brush.width,Brush.color)
-                
-         
+def hypothesis(p1,p2):
+    return((p1^2+p^2)**(1/2))              
+def trace(m_x,m_y):
+    for i in range(  )
 
