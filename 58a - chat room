@@ -1,0 +1,22 @@
+n = input()
+found = False
+while found == False:
+    h = n.find('h')
+    if h == -1:
+        break
+    else:            
+        e = n.find('e',h+1)
+        l1= n.find('l',e+1)
+        l2 = n.find('l', l1+1)
+        o = n.find('o',l2+1)
+        if h < e and e< l1 and l1<l2 and l2 <o:
+            print('YES')
+            found = True
+        else:
+            if len(n)<5:
+                break
+            n = n[h+1:]
+
+if found == False:
+    print('NO')
+
