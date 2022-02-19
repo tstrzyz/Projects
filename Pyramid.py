@@ -2,7 +2,7 @@ def pyramid(base):
     
     
     n = int(base)
-    space = 20
+    space = 40
     top = 0
     top = int(top)
     

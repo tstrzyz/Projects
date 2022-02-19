@@ -5,27 +5,27 @@ pygame.init()
 clock = pygame.time.Clock()
 screen=pygame.display.set_mode([1280,720])
 pygame.display.set_caption("paint")
-color = (255,255,255)
-radius = 5
+color = (0,0,0)
+
 done = False
 screen.fill((255,255,255))
-drawing = True
+drawing= False
 
-class main(self,self.spot,self.fps):
-
+#class main(self,self.spot,self.fps):
+drawing = False
 def main(fps):
     pygame.display.update()
     clock.tick(300)
-    main.spot = pygame.mouse.get_pos()
-
-    m_x = int(spot[0])
-    m_y = int(spot[1])
+    global drawing
     for event in pygame.event.get():
+        main.spot = pygame.mouse.get_pos()
+        
+        m_x = int(main.spot[0])
+        m_y = int(main.spot[1])    
         if event.type == pygame.MOUSEBUTTONDOWN:
-            drawing = True
-
+                drawing = True
         if event.type == pygame.MOUSEBUTTONUP:
-            drawing = False
+                drawing = False
 
         if  event.type == pygame.KEYDOWN:
             if event.key == pygame.K_r:
@@ -37,15 +37,20 @@ def main(fps):
             done = True
 
         if event.type == pygame.MOUSEMOTION:
-            DrawPen()
+            DrawPen(5,m_x,m_y,drawing)
+            
+            
+                  
+            
 
 
-def DrawPen():
-                if drawing == True:
-                    pygame.draw.circle(screen,color,main.spot,radius)
-                    for i in range(4):
-                        pygame.gfxdraw.aacircle(screen,m_x-1,m_y,radius,color)
-                        radius -= 1
-                    radius = 5
+def DrawPen(radius,m_x,m_y,drawing):
+        if drawing == True:
+            pygame.draw.circle(screen,color,main.spot,radius)
+            for i in range(4):
+                pygame.gfxdraw.aacircle(screen,m_x-1,m_y,radius,color)
+                radius -= 1
+            radius = 5
+
 while not done:
-    main(60)
+    main(120)
