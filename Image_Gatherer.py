@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import urllib.request
 import requests
 import urllib
-
+#website from which we download all images
 website = "https://store.steampowered.com/digitalgiftcards/"
 html_page = urllib.request.urlopen(website)
 soup = BeautifulSoup(html_page, "html.parser")

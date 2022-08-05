@@ -46,8 +46,5 @@ while not done:
         if drawing == True:
             
             Brush.circle(screen,m_x,m_y,Brush.width,Brush.color)
-def hypothesis(p1,p2):
-    return((p1^2+p^2)**(1/2))              
-def trace(m_x,m_y):
-    for i in range(  )
+
 
